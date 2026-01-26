@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Rite Solutions | Plumbing, Electrical & Utility Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .service-card:hover { transform: translateY(-5px); transition: 0.3s; }
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920'); background-size: cover; }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+
+    <nav class="bg-white p-5 shadow-md flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-black tracking-tighter">GROUP<span class="text-blue-600">RITE</span> SOLUTIONS</div>
+        <a href="#book" class="bg-red-600 text-white px-6 py-2 rounded-md font-bold text-sm hover:bg-red-700 animate-pulse">24/7 EMERGENCY</a>
+    </nav>
+
+    <header class="hero-bg py-32 text-center text-white px-6">
+        <h1 class="text-5xl md:text-7xl font-black mb-4">Total Property <span class="text-blue-500">Control.</span></h1>
+        <p class="text-xl opacity-80 max-w-2xl mx-auto">Elite Leak Detection, Electrical, & Smart Meter Subscriptions for Modern Property Owners.</p>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 -mt-16 grid md:grid-cols-4 gap-6">
+        <div class="bg-white p-8 rounded-2xl shadow-xl border-b-4 border-blue-500 service-card text-center">
+            <div class="text-4xl mb-4">💧</div>
+            <h3 class="font-bold uppercase text-xs tracking-widest text-slate-400">Plumbing</h3>
+            <p class="font-black text-xl">Leak Detection</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-xl border-b-4 border-yellow-500 service-card text-center">
+            <div class="text-4xl mb-4">⚡</div>
+            <h3 class="font-bold uppercase text-xs tracking-widest text-slate-400">Electrical</h3>
+            <p class="font-black text-xl">Maintenance</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-xl border-b-4 border-green-500 service-card text-center">
+            <div class="text-4xl mb-4">📊</div>
+            <h3 class="font-bold uppercase text-xs tracking-widest text-slate-400">Utilities</h3>
+            <p class="font-black text-xl">Smart Meters</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-xl border-b-4 border-red-500 service-card text-center">
+            <div class="text-4xl mb-4">🌪️</div>
+            <h3 class="font-bold uppercase text-xs tracking-widest text-slate-400">Drainage</h3>
+            <p class="font-black text-xl">Drain Cleaning</p>
+        </div>
+    </section>
+
+    <section id="book" class="max-w-4xl mx-auto py-20 px-6">
+        <div class="bg-white p-10 rounded-3xl shadow-2xl border border-slate-100">
+            <h2 class="text-3xl font-black mb-8 text-center uppercase italic">Request Technical Dispatch</h2>
+            
+            <form id="leadForm" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <input type="text" id="name" placeholder="Full Name" required class="p-4 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="tel" id="phone" placeholder="Phone Number" required class="p-4 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <input type="text" id="address" placeholder="Physical Address" required class="w-full p-4 bg-gray-50 rounded-xl border-none outline-none focus:ring-2 focus:ring-blue-500">
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <select id="service" class="p-4 bg-gray-50 rounded-xl font-bold">
+                        <option>Leak Detection / Plumbing</option>
+                        <option>Electrical Fault Finding</option>
+                        <option>Drain Cleaning / Unblocking</option>
+                        <option>Monthly Meter Subscription</option>
+                        <option>General Maintenance</option>
+                    </select>
+                    <div class="flex items-center gap-3 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                        <input type="checkbox" id="is_subscription" class="w-5 h-5 accent-blue-600">
+                        <label for="is_subscription" class="text-xs font-bold text-blue-900 uppercase">Enquire about Meter Subscription</label>
+                    </div>
+                </div>
+
+                <textarea id="details" placeholder="Describe the issue or request..." class="w-full p-4 bg-gray-50 rounded-xl h-32 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+                <button type="submit" id="submitBtn" class="w-full bg-slate-900 text-white font-black py-5 rounded-2xl uppercase tracking-widest hover:bg-blue-600 shadow-xl transition-all">
+                    Dispatch Team / Register
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 py-12 text-center text-slate-500 text-sm">
+        <p>GROUP RITE SOLUTIONS | Registered Electrical & Plumbing Contractors</p>
+        <p class="mt-2">&copy; 2026 Professional Maintenance System</p>
+    </footer>
+
+    <script>
+        document.getElementById('leadForm').onsubmit = async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = "SENDING...";
+            btn.disabled = true;
+
+            const formData = new FormData();
+            formData.append('name', document.getElementById('name').value);
+            formData.append('phone', document.getElementById('phone').value);
+            formData.append('address', document.getElementById('address').value);
+            formData.append('service', document.getElementById('service').value);
+            formData.append('is_subscription', document.getElementById('is_subscription').checked);
+            formData.append('details', document.getElementById('details').value);
+
+            try {
+                const response = await fetch('/api/lead', { method: 'POST', body: formData });
+                if(response.ok) {
+                    alert('SUCCESS: Group Rite has received your request. A technician will call you shortly.');
+                    location.reload();
+                }
+            } catch (err) {
+                alert('Connection Error');
+            } finally {
+                btn.innerText = "DISPATCH TEAM / REGISTER";
+                btn.disabled = false;
+            }
+        };
+    </script>
+</body>
+</html>
