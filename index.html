@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Rite Solutions | Master Utility & Infrastructure Engineering</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,17 +26,13 @@
     </a>
 
     <div class="bg-blue-600 text-white py-3 px-6 text-center text-[10px] font-black uppercase tracking-[0.3em] relative z-[100]">
-        Industrial Status: All Engineering Units Online | We Cover All Of KwaZulu-Natal . Book An Appointment With Us Today  
+        We Cover All Of KwaZulu-Natal. Book An Appointment With Us Today  
     </div>
 
     <nav class="sticky top-0 w-full z-50 glass border-b border-slate-200">
         <div class="max-w-[1440px] mx-auto px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="grs logo .png" alt="Group Rite Solutions" class="h-12 w-auto object-contain">
-                <div>
-                    <h1 class="text-xl font-[900] tracking-tighter uppercase leading-none text-slate-900">GROUP<span class="text-blue-600">RITE</span></h1>
-                    <p class="text-[8px] font-black tracking-[0.5em] text-slate-400 uppercase mt-1">Multi-Solution Systems</p>
-                </div>
+            <div class="flex items-center">
+                <img src="grs logo .png" alt="Group Rite Solutions" class="h-14 w-auto object-contain">
             </div>
             <div class="hidden xl:flex space-x-12 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
                 <a href="#divisions" class="hover:text-blue-600 transition">Our Divisions</a>
@@ -56,7 +53,7 @@
                     One Group. <br><span class="text-blue-600 italic">Total Solve.</span>
                 </h2>
                 <p class="text-slate-500 text-xl leading-relaxed mb-12 max-w-2xl font-medium">
-                    From deep-slab leak detection to high-voltage electrical grids and smart utility metering. Group Rite is the definitive solution for KZN's industrial and residential infrastructure.
+                    From deep-slab leak detection and fire suppression systems to high-voltage grids. Group Rite is the definitive solution for KZN's industrial and residential infrastructure.
                 </p>
                 <div class="flex flex-wrap gap-6">
                     <a href="#dispatch" class="bg-slate-950 text-white px-12 py-6 rounded-3xl font-black uppercase tracking-widest hover:bg-blue-600 transition-all shadow-2xl">Initialize Lead</a>
@@ -73,14 +70,19 @@
         <div class="max-w-[1440px] mx-auto px-8">
             <div class="mb-24 text-center">
                 <h3 class="text-blue-600 font-black text-xs uppercase tracking-[0.4em] mb-4">Our Technical Scope</h3>
-                <h2 class="text-6xl font-[900] tracking-tighter uppercase italic">8 Specialized <span class="text-slate-400">Divisions.</span></h2>
+                <h2 class="text-6xl font-[900] tracking-tighter uppercase italic">Engineering <span class="text-slate-400">Divisions.</span></h2>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-10 rounded-[3rem] service-tile">
                     <div class="text-4xl mb-6">🔍</div>
                     <h4 class="text-xl font-black uppercase mb-4 tracking-tighter italic">Leak Detection</h4>
-                    <p class="text-slate-400 text-xs font-bold leading-relaxed">Acoustic, Thermal Tracer tech to find underground leaks without excavation.</p>
+                    <p class="text-slate-400 text-xs font-bold leading-relaxed">Acoustic & Thermal Tracer tech to find underground leaks without excavation.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[3rem] service-tile">
+                    <div class="text-4xl mb-6">🔥</div>
+                    <h4 class="text-xl font-black uppercase mb-4 tracking-tighter italic">Fire Services</h4>
+                    <p class="text-slate-400 text-xs font-bold leading-relaxed">Hydrant testing, sprinkler system maintenance, and fire-compliant plumbing solutions.</p>
                 </div>
                 <div class="bg-white p-10 rounded-[3rem] service-tile">
                     <div class="text-4xl mb-6">💧</div>
@@ -149,8 +151,8 @@
                         <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden"><div class="w-[95%] h-full bg-blue-500"></div></div>
                     </div>
                     <div class="space-y-2">
-                        <div class="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-400"><span>Electrical COC Pipeline</span><span class="text-amber-500">Optimized</span></div>
-                        <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden"><div class="w-[88%] h-full bg-amber-500"></div></div>
+                        <div class="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-400"><span>Fire Suppression Readiness</span><span class="text-red-500">Operational</span></div>
+                        <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden"><div class="w-[92%] h-full bg-red-500"></div></div>
                     </div>
                     <div class="space-y-2">
                         <div class="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-400"><span>Smart Meter Network</span><span class="text-emerald-500">Stable</span></div>
@@ -191,6 +193,7 @@
                         <label class="text-[10px] font-black uppercase text-slate-400 ml-6">Primary Service Division</label>
                         <select id="service" class="w-full p-6 bg-slate-50 rounded-[2rem] outline-none focus:ring-4 focus:ring-blue-600/10 transition border-none font-black text-blue-600 appearance-none">
                             <option>Leak Detection (Acoustic/Thermal)</option>
+                            <option>Fire Services & Suppression</option>
                             <option>Plumbing & Hydraulics</option>
                             <option>Building & Construction</option>
                             <option>Infrastructure Maintenance</option>
@@ -208,7 +211,7 @@
 
                 <div class="space-y-2">
                     <label class="text-[10px] font-black uppercase text-slate-400 ml-6">Detailed Technical Briefing</label>
-                    <textarea id="details" required class="w-full p-8 bg-slate-50 rounded-[3rem] outline-none focus:ring-4 focus:ring-blue-600/10 transition border-none h-40 font-medium text-lg" placeholder="e.g. Visible damp on wall, water meter spinning fast, no hot water, tenant needs prepaid light meter..."></textarea>
+                    <textarea id="details" required class="w-full p-8 bg-slate-50 rounded-[3rem] outline-none focus:ring-4 focus:ring-blue-600/10 transition border-none h-40 font-medium text-lg" placeholder="e.g. Fire hydrant testing, visible damp, tenant needs prepaid meter..."></textarea>
                 </div>
 
                 <div class="bg-amber-50 border-l-8 border-amber-400 p-8 rounded-[2rem] text-[11px] font-black text-amber-900 uppercase tracking-tight">
